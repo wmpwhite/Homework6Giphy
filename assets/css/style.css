@@ -1,0 +1,29 @@
+/* Styling for Homework 6 - Giphy exercise */
+
+button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+
+}
+
+#button-area {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+#input-area {
+    margin-top: 50px;
+    margin-left: 350px;
+
+}
+
+#gif-area {
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+#gif-display {
+    float: left;
+    padding: 15px;
+}
