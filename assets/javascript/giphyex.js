@@ -24,13 +24,12 @@ $("#add-button").on("click", function (event) {
 });
 
 
-// $(".cartoons").on("click", function() {
+$(document).on("click", ".cartoons", function() {
 
-    // var selection = $(this).attr("item-name");
-    // var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + selection + "&api_key=MOBBQVEBv2WjPT3Q7ulmiZ8SrDSO1zli&limit=12";
-    // console.log(selection)
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=the+flinstones&api_key=MOBBQVEBv2WjPT3Q7ulmiZ8SrDSO1zli&limit=12"
-
+    var selection = $(this).attr("item-name");
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + selection + "&api_key=MOBBQVEBv2WjPT3Q7ulmiZ8SrDSO1zli&limit=12";
+    console.log(selection)
+    
     $.ajax( {
     url: queryURL,
     method: "GET"
@@ -46,8 +45,8 @@ $("#add-button").on("click", function (event) {
         tempDiv.append(cartoonImage);
         $("#gif-area").prepend(tempDiv);
         }
-    });
-// });
+    })
+ });
 
 
 
