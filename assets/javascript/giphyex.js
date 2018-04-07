@@ -21,6 +21,7 @@ $("#add-button").on("click", function (event) {
     var temp2 = $("#cartoon-input").val().trim();
     cartoon.push(temp2);
     makeButtons();
+    $("#cartoon-input").val("");
 });
 
 
@@ -37,21 +38,40 @@ $(document).on("click", ".cartoons", function() {
     .then(function(response) {
     console.log(response);
     var results = response.data;
+    $("#gif-area").html("");
     for (var i = 0; i < results.length; i++) {
-        tempDiv = $("<div class='item'>");
+        var animatedImage = results[i].images.downsized.url;
+        var stillImage = results[i].images.downsized_still.url;
+        console.log(stillImage);
+
+        var tempDiv = $("<div class='item'>");
         var cartoonImage = $("<img>");
-        cartoonImage.attr("src", results[i].images.fixed_height_still.url);
-        cartoonImage.attr("id" , "gif-display")
+        cartoonImage.attr("src", stillImage);
+        cartoonImage.attr("class", "gif");
+        cartoonImage.attr("data-still", stillImage);
+        cartoonImage.attr("data-animate", animatedImage);
+        cartoonImage.attr("data-state", $(cartoonImage).attr("src"));        
+        cartoonImage.attr("id", "gif-display")
         tempDiv.append(cartoonImage);
-        $("#gif-area").prepend(tempDiv);
+        $("#gif-area").append(tempDiv);
         }
     })
  });
 
+ $(document).on("click", ".gif", function(e) {
+    //  console.log(e.target);
 
-
-
-
-
+     var state = $(this).attr("data-state");
+     var still = $(this).attr("data-still");
+     var animated = $(this).attr("data-animate");
+    if (state === still) {
+        $(this).attr("src", animated);
+        $(this).attr("data-state", animated);
+    }  
+    else {
+        $(this).attr("src", still);
+        $(this).attr("data-state", still);
+    }
+ });
 
 makeButtons();
