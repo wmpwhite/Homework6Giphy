@@ -1,28 +1,78 @@
 /* Styling for Homework 6 - Giphy exercise */
 
+/* styling for body, including background image and font */
+body {
+    box-sizing: border-box;
+    font-family: 'Gaegu', cursive;
+    background-color: wheat;
+    background-image: url("../images/spongebob-png-44219.png");
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;    
+}
+
+.container {
+    
+}
+
+/* styled color, font and button shape for top buttons */
 button {
-    padding: 10px;
+    font-family: 'Gaegu', cursive;
+    font-size: 20px;
+    padding: 5px;
     margin: 10px;
     border-radius: 5px;
-
+    background-color: red;
 }
 
+/* Styling for header lines in the following three sections */
+.heading {      
+    text-align: center;
+    margin: 25px;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 52px;
+    color: blue;
+}
+
+h2 {
+    font-size: 32px; 
+}
+
+/* margins for div that contains buttons */
 #button-area {
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: 15px;
 }
 
+/* margins for the area where the input area resides */
 #input-area {
-    margin-top: 50px;
-    margin-left: 350px;
-
+    margin-top: 40px;
+    margin-left: 375px;
 }
 
+/* styling for the button that adds new buttons to the top */
+#add-button {
+    font-family: 'Gaegu', cursive;
+    font-size: 20px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: yellow;
+}
+
+/* adjusts size of the text input box */
+#cartoon-input{
+    height: 30px;
+}
+/* margins for div where gifs are displayed */
 #gif-area {
     margin-top: 20px;
     margin-left: 50px;
 }
-
+/* floats gif so that they align horizontally rather than vertically */
 #gif-display {
     float: left;
     padding: 15px;

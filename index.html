@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- <script type="text/javascript"> -->
-
+    <link href="https://fonts.googleapis.com/css?family=Gaegu" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">   
     <title>Giphy Scrape</title>
@@ -16,30 +15,31 @@
         
     <div class="container">
 
+        <audio src="assets/images/8d82b5_SpongeBob_I_m_Ready_Sound_Effect.mp3" autoplay></audio>
+                
+        
+        <!-- div containing heading lines -->
+        <div class="heading">
+            <h1>Crazy About Cartoons!</h1>
+
+            <h2>Gifs of your favorite cartoon characters</h2>
+            <hr>
+        </div>
  
-        <div id="button-area">
+        <!-- div containing dynamically rendered buttons -->
+        <div id="button-area"></div> 
 
-        </div> 
-
-
+        <!-- div containing text box and button for creating new buttons -->
         <div id="input-area">
-
-                <form id="movie-form">
-                    <label for="cartoon-input">Make a button for your favorite cartoon show or character</label>
-                    <input type="text" id="cartoon-input"><br>                    
-                    <input id="add-button" type="submit" value="Make a Button">
-                </form>
-
-
-
+            <form id="movie-form">
+                <label for="cartoon-input">Make a button for your favorite cartoon show or character:  </label>
+                <input type="text" id="cartoon-input"><br>                    
+                <input id="add-button" type="submit" value="Make a Button">
+            </for>            
         </div>
-
-
-        <div id="gif-area">
-
-        </div>
-
-    
+       
+        <!-- div for displaying gifs as they are dynamically loaded -->
+        <div id="gif-area"></div>
 
     </div>
 
