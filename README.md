@@ -1,1 +1,3 @@
 # Homework6Giphy
+
+This homework was, as John said, relatively easy since almost everything was given to us in class.  I did not catch the logic of the final piece (toggling between still and animated) when it was presented in class and it did not get pushed to us in a solved exercise so I did have to do that piece on my own.  I did get one piece of advice from Darren Kay on logic.  He suggested making the value of the current state on display equal of the image to the url of the images, either still or animated, so that its state can be detected by comparing the url values of of the data-state against the url of the images to determine current state and reset to the new state when it is changed.  That made good sense to me and and fit with the logic I had in my mind.  
